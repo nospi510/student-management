@@ -1,79 +1,140 @@
-Student Management System
-Description
-Application web pour la gestion des étudiants avec un backend Spring Boot (API REST CRUD) et un frontend Angular. Le backend utilise MariaDB pour stocker les données des étudiants (ID, prénom, nom, email). Le frontend permet d'afficher, ajouter, modifier et supprimer des étudiants via une interface utilisateur simple.
-Prérequis
+# 🎓 Student Management System
 
-Backend :
-Java 17
-Maven
-MariaDB (base de données student_db, utilisateur nick, mot de passe passer)
+Une application web de gestion des étudiants avec :
 
+- 🔧 Backend en **Spring Boot** (API REST CRUD)
+- 🎨 Frontend en **Angular**
+- 💾 Base de données **MariaDB**
 
-Frontend :
-Node.js et npm
-Angular CLI 18+
+Permet de **créer, lire, modifier et supprimer** des étudiants via une interface simple.
 
+---
 
+## ✅ Prérequis
 
-Installation
-Backend
+### 🔙 Backend
 
-Clonez le dépôt :git clone https://github.com/nospi510/student-management.git
+| Outil | Version |
+|-------|---------|
+| Java | 17 |
+| Maven | Dernière version |
+| MariaDB | Installé et configuré |
+
+### 🖥️ Frontend
+
+| Outil | Version |
+|-------|---------|
+| Node.js | ≥ 18 |
+| npm | ≥ 9 |
+| Angular CLI | ≥ 18 |
+
+---
+
+## 🔧 Installation
+
+### 🚀 Backend
+
+1. **Cloner le dépôt** :
+
+```bash
+git clone https://github.com/nospi510/student-management.git
 cd student-management
+````
 
+2. **Configurer MariaDB** :
 
-Configurez MariaDB :CREATE DATABASE student_db;
+```sql
+CREATE DATABASE student_db;
+
 CREATE USER 'nick'@'localhost' IDENTIFIED BY 'passer';
+
 GRANT ALL PRIVILEGES ON student_db.* TO 'nick'@'localhost';
+
 FLUSH PRIVILEGES;
+```
 
+3. **Lancer le backend** :
 
-Lancez le backend :cd backend
+```bash
+cd backend
 ./mvnw spring-boot:run
+```
 
+4. **Accéder à l’API via Swagger** :
 
-Accédez à l'API via Swagger : http://localhost:8080/swagger-ui/index.html
+👉 [http://localhost:8080/swagger-ui/index.html](http://localhost:8080/swagger-ui/index.html)
 
-Frontend
+---
 
-Naviguez dans le dossier frontend :cd student-frontend
+### 🌐 Frontend
 
+1. **Aller dans le dossier frontend** :
 
-Installez les dépendances :npm install
+```bash
+cd student-frontend
+```
 
+2. **Installer les dépendances** :
 
-Lancez le frontend :ng serve
+```bash
+npm install
+```
 
+3. **Lancer le serveur Angular** :
 
-Ouvrez http://localhost:4200 dans un navigateur.
+```bash
+ng serve
+```
 
-Fonctionnalités
+4. **Accéder à l’application** :
 
-Backend :
-API REST pour gérer les étudiants (GET, POST, PUT, DELETE).
-Documentation Swagger.
-Persistance des données dans MariaDB.
+👉 [http://localhost:4200](http://localhost:4200)
 
+---
 
-Frontend :
-Liste des étudiants avec options pour ajouter, modifier, supprimer.
-Formulaire pour saisir les informations des étudiants.
+## 🧩 Fonctionnalités
 
+### 🔙 Backend
 
+* API REST :
 
-Technologies
+  * `GET /students`
+  * `POST /students`
+  * `PUT /students/{id}`
+  * `DELETE /students/{id}`
+* Documentation Swagger
+* Persistance via Spring Data JPA & MariaDB
 
-Backend : Spring Boot 3.3.4, Spring Data JPA, MariaDB, Swagger (Springdoc)
-Frontend : Angular 18 (standalone), HttpClient
-Environnement : Ubuntu, VS Code
+### 🌐 Frontend
 
-Utilisation
+* Affichage de la liste des étudiants
+* Formulaire pour ajouter un étudiant
+* Boutons pour modifier et supprimer
 
-Ajoutez un étudiant via le formulaire sur http://localhost:4200.
-Modifiez ou supprimez un étudiant via les boutons dans la liste.
-Testez les endpoints via Swagger ou un outil comme Postman.
+---
 
-Contributeurs
+## ⚙️ Technologies
 
-Nick (développeur principal)
+| Côté          | Technologies                                                     |
+| ------------- | ---------------------------------------------------------------- |
+| Backend       | Spring Boot 3.3.4, Spring Data JPA, MariaDB, Swagger (Springdoc) |
+| Frontend      | Angular 18 (standalone), Angular HttpClient                      |
+| Environnement | Ubuntu, VS Code                                                  |
+
+---
+
+## ▶️ Utilisation
+
+* Accéder à [http://localhost:4200](http://localhost:4200)
+* Ajouter un étudiant via le formulaire
+* Modifier ou supprimer un étudiant depuis la liste
+* Tester l’API via Swagger ou Postman
+
+---
+
+## 👨‍💻 Contributeur
+
+* **Nick** – Développeur principal ✨
+  [https://github.com/nospi510](https://github.com/nospi510)
+
 
